@@ -12,7 +12,10 @@ const newAskHandler = async (event) => {
     const id = document.querySelector('#create-ask').getAttribute('data-id');
     console.log(id)
 
+    console.log("outside if statement")
+
     if (description) {
+        console.log(description)
         const response = await fetch(`/api/projectAsks`, {
             method: 'POST',
             body: JSON.stringify({ description }),
@@ -20,7 +23,8 @@ const newAskHandler = async (event) => {
                 'Content-Type': 'application/json',
             },
         });
-
+        console.log(JSON.stringify({description}))
+        alert("Failed")
         if (response.ok) {
             // const id = document.querySelector('#create-ask').getAttribute('data-id');
             document.location.replace(`/project/${id}`);
