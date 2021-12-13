@@ -1,0 +1,501 @@
+/* ===================== Color Variables ======================  */
+:root {
+    --lightgray: #eae7e2;
+    --lightteal: #d7e2e8;
+    --lightblue: #b9cbd9;
+    --lightred: #fcc9c5;
+    --lightpink: #feddd8;
+    --lightgreen: #cfe3e2;
+}
+
+
+/* ========================== Universal ======================= */
+* {
+    background-color: #4f99b8;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #a0ced9;
+    color: #355c7d;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.btn-primary:hover {
+    opacity: 0.5;
+    background-color: #809bce;
+    color: #355c7d;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.form-input {
+    background-color: #a0ced9;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+ul {
+    background-color: #eefcff;
+}
+
+li {
+    background-color: #eefcff;
+}
+
+
+/* ======================== Headings ========================== */
+h1 {
+    font-family: 'Bakbak One', cursive;   
+    font-size: 5rem;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Mukta', sans-serif;  
+    font-size: 3rem;
+}
+
+h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 24px;
+    margin: 15px;
+}
+
+
+/* ====================== Navigation ======================= */
+
+.login-link {
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#logout-btn-a {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+    color: #355c7d;
+    font-weight: bold;
+    background-color: #a0ced9;
+}
+
+#logout-btn-a:hover {
+    opacity: 0.5;
+}
+
+
+/* ======================== Login Page Elements ====================== */
+
+.main-login-container {
+    text-align: center;
+}
+
+.not-member {
+    text-align: center;
+}
+
+.login-btn {
+    margin: 1rem;
+}
+
+.login-form-grp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.signup-form-grp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#login-email-label,
+#email-login,
+#login-password-label,
+#signup-email-label,
+#email-signup,
+#signup-password-label {
+    margin: 5px;
+}
+
+
+/* ======================== Profile Page ========================= */
+
+#new-project-form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#project-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    background-color: #8eccd8;
+    color: #1F456E;
+}
+
+#project-title-container {
+    background-color: #8eccd8;
+    border-radius: 10%;
+}
+
+#project-title {
+    font-size: 48px;
+    background-color: #8eccd8;
+}
+
+
+#btn-bg {
+    background-color: #8eccd8;
+}
+
+#create-project {
+    border-radius: 10px;
+    margin: 2px;
+    color: #355c7d;
+    background-color: #a0ced9;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+#create-project:hover {
+    opacity: 0.5;
+}
+
+
+/* ======================= Project Page ========================= */
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    /* border-radius: 10px; */
+    background-color: #4f99b8;
+}
+
+.project-main {
+    width: 50%;
+    background-color: #4f99b8;
+}
+
+.project-asks-container {
+    border: 1px solid black;
+    margin: 2rem;
+    border-radius: 5px;
+    background-color: #eefcff;
+}
+
+.project-ask-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #eefcff;
+}
+
+.back-to-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.back-to-list-btn {
+    border-radius: 10px;
+}
+
+.comment-main-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2rem;
+    width: 50%;
+    background-color: #eefcff;
+}
+
+.kanban {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid black;
+    margin: 2rem;
+    border-radius: 5px;
+    background-color: #eefcff;
+}
+
+
+#delete-btn {
+    border: solid 2px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#project-id {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    border: solid 2px;
+    width: 33%;
+    height: 250px;
+    font-size: 48px;
+    text-align: center;
+    margin: 0.5px;
+    border-radius: 25px;
+    background-color: #8eccd8;
+}
+
+.project-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#project-name  {
+    padding: 15px;
+    font-size: 48px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: #eefcff;
+}
+
+.section-title {
+    margin: 1rem;
+    background-color: #eefcff;
+}
+
+.comment-title {
+    background-color: #eefcff;
+} 
+
+.comment-form {
+    background-color: #4f99b8;
+}
+
+.account-info {
+    display: flex;
+    border: solid 1px black;
+    margin: 2rem;
+}
+
+#client-email,
+#client-phone,
+#client-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: #eefcff;
+}
+
+#new-ask-title {
+    width: 80%;
+    resize: both;
+}
+
+#new-ask-name {
+    margin: 2px;
+    background-color: #eefcff;
+}
+
+#new-task-title {
+    width: 80%;
+    resize: both;
+    background-color: #a0ced9;
+}
+
+#new-task-name {
+    margin: 2px;
+}
+
+.comment-form {
+    width: 100%;
+}
+
+#new-comment-title {
+    width: 80%;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-asks {
+    margin: 8px;
+}
+
+.comments,
+#comment-item-desc,
+.contact-info,
+.account-name,
+.project-form-group,
+.to-do-container {
+    background-color: #eefcff;
+}
+
+
+/* ========================= Media Queries ============================== */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */ 
+@media only screen and (max-width: 1200px) { 
+
+    /* Project Page */
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-main {
+        width: 100%;
+    }
+    .contact-info {
+        width: 100%;
+    }
+    .comment-main-container {
+        width: 93%;
+    }
+
+    #project-ask-desc,
+    #comment-item-desc,
+    #project-task-desc {
+        overflow-wrap: normal;
+    }
+
+    /* Profile Page */
+
+    .project-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        justify-content: space-evenly;
+    }
+
+}
+
+/* Large devices (laptops and desktops, 1000px and up) */ 
+@media only screen and (max-width: 1000px) {
+
+    /* Login Page */
+
+    .signup-form-grp,
+    .login-form-grp {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    /* Profile Page */
+
+    .project-list {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    #project-id {
+        width: 100%;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .new-project-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-title {
+        font-size: smaller;
+    }
+
+    .delete-btn {
+        position: relative;
+    }
+
+    #btn-bg {
+        border-radius: 15%;
+    }
+
+
+    /* Project Page */
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-main {
+        width: 100%;
+    }
+    .contact-info {
+        width: 100%;
+    }
+    .comment-main-container {
+        width: auto;
+    }
+} 
+
+/* Medium devices (laptops and desktops, 800px and up) */ 
+@media only screen and (max-width: 800px) {
+
+    /* Project Page */
+
+    .account-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/* Medium-Small devices (tablets, large phones, 750px and up */
+@media only screen and (max-width: 750px) {
+
+    /* Project Page */
+
+    .comment-main-container {
+        width: auto;
+    }
+}
+
+/* Small devices (phones, 600px and up) */ 
+@media only screen and (max-width: 600px) {
+
+    /* Project Page */
+
+    #client-email {
+        font-size: 1rem;
+    }
+
+    .comment-main-container {
+        width: auto;
+    }
+}

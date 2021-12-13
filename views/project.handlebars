@@ -1,0 +1,135 @@
+{{!-- Project Page Template --}}
+<div class="main-container">
+    <div class="project-main">
+        <div class="account-info">
+            <div class="account-name">
+                <h1 id="project-name">{{project.name}}:</h1>
+            </div>
+            <div class="contact-info">
+                <h5 id="client-name">Client: {{project.client_name}}</h5>
+                <h5 id="client-email">Email: {{project.client_email}}</h5>
+                <h5 id="client-phone">Phone: {{project.client_phone}}</h5>
+
+            </div>
+        </div>
+
+{{!-- Displays all current project asks --}}
+    <div class="project-asks-container">
+                    <h4 class="section-title">Project Asks:</h4>
+        <form class="form new-ask-form" id="new-ask-form">
+
+{{!-- Criteria inputs for new asks --}}
+        <div class="form-group project-form-group" id="create-ask" data-id={{project.id}}>
+            {{!-- <label for="ask-title" id="new-ask-name">New Ask:</label> --}}
+            <input class="form-input" type="textarea" id="new-ask-title" name="ask-title" />
+            <button type="submit" class="btn btn-primary" id="create-ask-btn">+</button>
+        </div>
+        </form>
+        {{#if project.project_asks.length}}
+        <div class="project-asks">
+
+            {{#each project.project_asks as |projectAsk|}}
+            {{!-- Not sure how to make sure I'm pulling from the right project. 
+            How to incorporate the project id? Project-ask-item container
+            is set up for Flex to be set in a row so you can delete asks with the 'X'
+            if the user wants to. --}}
+            <div class="project-ask-item">
+                <ul class="project-ask-desc">
+                    <li id="project-ask-desc">{{projectAsk.description}}</li>
+                </ul>
+            </div>
+        {{/each}}
+        </div>
+        {{/if}}
+    </div>
+{{!-- Kanban Style container with To Do, In Progress, and Done tasks --}}
+    <div class="tasks kanban">
+        <h4 class="section-title">To Do's:</h4>
+            
+            <form class="form new-task-form" id="new-task-form">
+
+{{!-- Criteria inputs for new tasks --}}
+        <div class="form-group tasks-form project-form-group" id="create-task" data-id={{project.id}}>
+            <label for="task-title" id="new-task-name"></label>
+            <input class="form-input" type="text" id="new-task-title" name="task-title" />
+            <button type="submit" class="btn btn-primary" id="create-task-btn">+</button>
+        </div>
+        </form>
+        <div class="to-do-container">
+            
+                {{#if project.tasks.length}}
+
+                {{#each project.tasks as |task|}}
+
+                {{!-- How do I tell the task which div to be in based
+                on its stage? (To Do, In Progress, and Done) --}}
+
+                <div class="project-task-item">
+                    <ul class="project-task-desc">
+                        <li>{{task.task_content}}</li>
+                    </ul>
+                    
+                </div>
+                {{/each}}
+                {{/if}}
+
+            </div>
+
+            {{!-- <div class="done-container">
+
+                    {{#if tasks.length}}
+
+                    {{#each tasks as |task|}}
+
+                <div class="project-task-item">
+                    <div class="project-task-desc">
+                        <p>{{tasks.task_content}}</p>
+                    </div>
+                <div class="project-task-delete">
+                    <button class="project-task-del-btn">X</button>
+                </div>
+                </div>
+                    {{/each}}
+
+                    {{/if}}
+
+            </div> --}}
+        </div>
+
+    </div>
+
+    {{!-- Comment container on the right side (if we have time) --}}
+    <div class="comment-main-container">
+        <h4 class="section-title comment-title">Activity Feed</h4>
+        <form class="form new-comment-form" id="new-comment-form">
+
+{{!-- Comment --}}
+        <div class="form-group comment-form project-form-group" id="create-comment" data-id={{project.id}}>
+            <label for="comment-title" id="new-comment-name"></label>
+            <input class="form-input" type="textarea" id="new-comment-title" name="comment-title" />
+            <button type="submit" class="btn btn-primary" id="create-comment-btn">+</button>
+        </div>
+        </form>
+    
+    {{#if project.comments.length}}
+    <div class="comments">
+        {{#each project.comments as |comment|}}
+        <div class="comment-item">
+            <ul class="comment-desc">
+                <li id="comment-item-desc">{{comment.comment}}</li>
+            </ul>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+    </div>
+
+</div>
+
+        {{!-- Back to List button --}}
+        <div class="back-to-list">
+                <button class="back-to-list-btn btn-primary">Back to List</button>
+        </div>
+
+<script src='/js/project.js'></script>
+</div>

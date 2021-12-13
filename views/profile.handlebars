@@ -1,0 +1,66 @@
+{{!-- Welcome message to user with 'name' placeholder --}}
+
+<div class="main-profile-container">
+<div class="row">
+    <div class="col-auto">
+        <h2>Welcome, {{name}}!</h2>
+    </div>
+</div>
+
+
+{{!-- Displays all current projects (if any) --}}
+    
+    <div class="col-md-6 project-list">
+    {{#if projects.length}}
+{{!-- Tells Handlebars what information to display from each project --}}
+        {{#each projects as |project|}}
+        <div class="row mb-2" id="project-id">
+            <div class="col-md-8" id="project-title-container">
+                <p id="project-title"><a class="vov fade-in-up" href="/project/{{project.id}}" id="project-link" class="blur-in">{{project.name}}</a></p>
+            </div>
+            <div class="col-md-4" id="btn-bg">
+                <button class="btn btn-sm btn-danger" id="delete-btn" data-id={{project.id}}>🗑️</button>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+
+<div class="row mt-4">
+    <div>
+        <h5>Create a New Project:</h5>
+
+        <form class="form new-project-form" id="new-project-form">
+
+{{!-- Criteria inputs for new projects --}}
+        <div class="form-group">
+            <label for="project-name">Project:</label>
+            <input class="form-input" type="text" id="create-project-name" name="project-name" />
+        </div>
+        <div class="form-group">
+            <label for="client-name">Account:</label>
+            <input class="form-input" type="text" id="create-client-name" name="project-funding" />
+        </div>
+        <div class="form-group">
+            <label for="client-email">Email:</label>
+            <input class="form-input" type="text" id="create-client-email" name="project-funding" />
+        </div>
+        <div class="form-group">
+            <label for="client-phone">Phone:</label>
+            <input class="form-input" type="text" id="create-client-phone" name="project-funding" />
+        </div>
+        {{!-- <div class="form-group">
+            <label for="project-desc">project asks:</label>
+            <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+        </div> --}}
+        <div class="form-group">
+            <button type="submit" class="btn" id="create-project">Create</button>
+        </div>
+        </form>
+    </div>  
+
+</div>
+</div>
+
+
+<script src="./js/profile.js"></script>

@@ -1,0 +1,51 @@
+{{!-- Login template --}}
+<div class="main-login-container">
+<div>
+        <h1 class="main-title"></h1>
+        <br>
+        <h2>Login</h2>
+        <form class="form login-form  login-form-grp">
+            <div class="form-group">
+                <label for="email-login" id="login-email-label">Email:</label>
+                <input class="form-input" type="text" id="email-login" />
+            </div>
+            <div class="form-group">
+                <label for="password-login" id="login-password-label">Password:</label>
+                <input class="form-input" type="password" id="password-login" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary login-btn" type="submit">Login</button>
+            </div>
+        </form>
+    </div> 
+
+    <p class="not-member">Not already a member? <br> Go ahead and sign up below!</p>
+
+{{!-- Sign up template --}}
+    <div>
+        <h1 class="main-title"></h1>
+        <br>
+        <h2>Signup</h2>
+
+        <form class="form signup-form signup-form-grp">
+            <div class="form-group">
+                <label for="name-signup" id="signup-name-label">Name:</label>
+                <input class="form-input" type="text" id="name-signup" />
+            </div>
+            <div class="form-group">
+                <label for="email-signup" id="signup-email-label">Email:</label>
+                <input class="form-input" type="text" id="email-signup" />
+            </div>
+            <div class="form-group">
+                <label for="password-signup" id="signup-password-label">Password:</label>
+                <input class="form-input" type="password" id="password-signup" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary login-btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>   
+</div>
+</div>
+
+<script src="./js/login.js"></script>
