@@ -10,6 +10,7 @@ const newAskHandler = async (event) => {
 
     const description = document.querySelector('#new-ask-title').value.trim();
     const id = document.querySelector('#create-ask').getAttribute('data-id');
+    console.log(id)
 
     if (description) {
         const response = await fetch(`/api/projectAsks`, {
@@ -86,7 +87,7 @@ const newCommentHandler = async (event) => {
 };
 
 document
-    .querySelector('#create-ask')
+    .querySelector('#create-ask-btn')
     .addEventListener('click', newAskHandler);
 
 document
