@@ -25,7 +25,7 @@
             <button type="submit" class="btn btn-primary" id="create-ask-btn">+</button>
         </div>
         </form>
-        {{#if project.project_asks.length}}
+        {{!-- {{#if project.project_asks.length}} --}}
         <div class="project-asks">
 
             {{#each project.project_asks as |projectAsk|}}
@@ -40,7 +40,7 @@
             </div>
         {{/each}}
         </div>
-        {{/if}}
+        {{!-- {{/if}} --}}
     </div>
 {{!-- Kanban Style container with To Do, In Progress, and Done tasks --}}
     <div class="tasks kanban">
